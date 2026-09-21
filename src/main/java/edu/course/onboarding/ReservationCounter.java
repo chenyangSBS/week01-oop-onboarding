@@ -12,7 +12,7 @@ public final class ReservationCounter {
         this.limit = limit;
     }
 
-    public boolean reserve() {
+    public synchronized boolean reserve() {
         if (count < limit) {
             count++;
             return true;
